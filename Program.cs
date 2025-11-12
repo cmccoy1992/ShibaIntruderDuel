@@ -87,7 +87,7 @@ switch (opponent.ToUpper())
         Console.WriteLine("Wait, why exactly is there a baboon here? No matter- an intruder is an intruder.");
         enemyMoves[0] = "Simian Slap"; enemyMoves[1] = "Monkey Kick"; enemyMoves[2] = "Baboon Bonk";
         break;
-     case "D":
+     case "BAHAMUT":
         enemyName = "Bahamut";
         Console.WriteLine($"Opponent: \t {enemyName}");
         enemyMaxHP = 9000;
