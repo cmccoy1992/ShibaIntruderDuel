@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 //Shiba Stats
 int shibaVitality = 10;
@@ -43,7 +43,7 @@ Console.WriteLine("Type in A, B, or C for the opponent you want to fight: ");
 
 //Opponent Selection
 string opponent = Console.ReadLine();
-while ((opponent.ToUpper() != "A") && (opponent.ToUpper() != "B") && (opponent.ToUpper() != "C"))
+while ((opponent.ToUpper() != "A") && (opponent.ToUpper() != "B") && (opponent.ToUpper() != "C") && (opponent.ToUpper() != "BAHAMUT") )
 {
 	Console.WriteLine("That is not a valid opponent. Try again.");
 	opponent = Console.ReadLine();
@@ -86,6 +86,20 @@ switch (opponent.ToUpper())
         Console.WriteLine($"Health: \t   {enemyHP}");
         Console.WriteLine("Wait, why exactly is there a baboon here? No matter- an intruder is an intruder.");
         enemyMoves[0] = "Simian Slap"; enemyMoves[1] = "Monkey Kick"; enemyMoves[2] = "Baboon Bonk";
+        break;
+     case "D":
+        enemyName = "Bahamut";
+        Console.WriteLine($"Opponent: \t {enemyName}");
+        enemyMaxHP = 9000;
+        enemyDamageBonus = 50;
+        enemyAC = 15;
+        enemyHP = enemyMaxHP;
+        lootHeld = 20;
+        enemyAccuracy = 10;
+        Console.WriteLine($"Health: \t   {enemyHP}");
+        Console.WriteLine("Wait... Bahamut? The Bahamut from Final Fantasy? The Bahamut that blows up the world and calls it a day?");System.Threading.Thread.Sleep(2000);
+        Console.WriteLine("...Oh dear. Pup-Tart... just let him have some chicken nuggets.");System.Threading.Thread.Sleep(2000);
+        enemyMoves[0] = "Flare"; enemyMoves[1] = "Megaflare"; enemyMoves[2] = "Gigaflare";
         break;
     default:
         Console.WriteLine("How?");
